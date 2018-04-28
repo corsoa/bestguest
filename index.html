@@ -2,16 +2,23 @@
  <head>
   <link rel="stylesheet" href="bundle.css">
   <script src="bundle.js" async></script>
+  <script src="navigation.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  </head>
 <body>
   <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
         <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">
-          <!-- icon here -->
+          <img src="logo.png" class="logo" />
         </a>
         <span class="mdc-top-app-bar__title">BestGuest</span>
       </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <a class="material-icons mdc-top-app-bar__action-item" href="">
+            <i class="material-icons">call_missed</i>
+          </a>
+        </section>
     </div>
   </header>
   <br /><br /><br /><br />
@@ -34,18 +41,23 @@
        <ul class="mdc-list">
          <li class="mdc-list-item">Frequent Flier?
           <span class="mdc-list-item__meta">
-            YES
+            <i class="material-icons">airplanemode_active</i>
            </span>
          </li>
-         <li class="mdc-list-item">The Usual
+       </ul>
+       <ul class="mdc-list">
+         <li class="mdc-list-item">Big Fish?
           <span class="mdc-list-item__meta">
-            Diet Coke
+            <i class="material-icons">card_travel</i>
            </span>
          </li>
        </ul>
        <ul class="mdc-list">
         <li class="mdc-list-item">Notes
-          
+          <ul>
+            <li>The usual - Diet coke</li>
+            <li>Likes reggae music</li>
+          </ul>
         </li>
       </div>
     </div>    

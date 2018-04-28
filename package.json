@@ -23,6 +23,7 @@
     "@material/list": "^0.35.0",
     "@material/ripple": "^0.35.0",
     "@material/toolbar": "^0.35.0",
-    "@material/top-app-bar": "^0.35.0"
+    "@material/top-app-bar": "^0.35.0",
+    "@mdi/font": "^2.3.54"
   }
 }
