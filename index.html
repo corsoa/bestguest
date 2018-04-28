@@ -2,8 +2,10 @@
  <head>
   <link rel="stylesheet" href="bundle.css">
   <script src="bundle.js" async></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
   <script src="navigation.js"></script>
  </head>
 <body>
@@ -16,7 +18,7 @@
         <span class="mdc-top-app-bar__title">BestGuest</span>
       </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-          <a class="material-icons mdc-top-app-bar__action-item" href="">
+          <a class="material-icons mdc-top-app-bar__action-item" href="#" onclick="navPage('top-customer-report')">
             <i class="material-icons">call_missed</i>
           </a>
         </section>
@@ -51,6 +53,22 @@
   </div>
 
 </div>
+
+  <div class="mdc-card" id="top-customer-report-card">
+    <div class="mdc-card__media mdc-card__Titlemedia--square">
+      <div class="mdc-card__media-content">
+        <table id="top-customer-datatable">
+          <thead>
+            <th>Customer Name</th>
+            <th>Visits past 30 days</th>
+            <th>Avg. spent per visit</th>
+            <th>Total Spend</th>
+            <th>Big Fish Score</th>
+          </thead>
+        </table>        
+      </div>
+    </div>
+  </div>
   
   <!-- Regular Customer Card -->
   <div class="mdc-card" id="regular-customer-card">
@@ -93,5 +111,7 @@
       </div>
     </div>
   </div>
+
+  
 	</body>
 </html>
