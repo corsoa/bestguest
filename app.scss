@@ -28,16 +28,18 @@ $mdc-theme-primary: #0288d1;
   color: $mdc-theme-primary;
 }
 .intro-sub-card {
-  height: 200px;
-  width: 50%;
+  height: 100px;
   float: left;
   padding-left: 10px;
 }
 #new-customer-sub-card {
-  background-color: #e53935;
+  background-color: #ffc310;
 }
 #regular-customer-sub-card {
   background-color: #43a047;
+}
+.mdc-card__media-content h4 {
+  text-shadow: 1px 2px #000;
 }
 #intro-card {
   flex-direction: row;

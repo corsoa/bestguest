@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/plug-ins/1.10.16/sorting/currency.js"></script>
   <script src="navigation.js"></script>
  </head>
 <body>
@@ -26,7 +27,8 @@
   </header>
   <br /><br /><br /><br />
   <!-- INTRO CARD -->
-  <div class="mdc-card" id="intro-card">
+  <div id="intro-card">
+    <div class="mdc-card">
     <div class="mdc-card__media mdc-card__Titlemedia--square">
       <h1 class="mdc-typography--headline2">Welcome to Cheesy's Pizza</h1>
     </div>
@@ -51,7 +53,12 @@
       </div>
     </div>
   </div>
-
+  </div>
+  <div class="clear">
+    <h4 class="mdc-typography--headline4">
+      Swipe the customer's card to begin.
+    </h4>
+  </div>
 </div>
 
   <div class="mdc-card" id="top-customer-report-card">
@@ -63,7 +70,9 @@
             <th>Visits past 30 days</th>
             <th>Avg. spent per visit</th>
             <th>Total Spend</th>
-            <th>Big Fish Score</th>
+            <th>Frequent Flyer?</th>
+            <th>Big Fish</th>
+            <th>Score</th>
           </thead>
         </table>        
       </div>
