@@ -2,14 +2,15 @@
  <head>
   <link rel="stylesheet" href="bundle.css">
   <script src="bundle.js" async></script>
-  <script src="navigation.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="navigation.js"></script>
  </head>
 <body>
   <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">
+        <a href="#" onclick="navPage()" class="material-icons mdc-top-app-bar__navigation-icon">
           <img src="logo.png" class="logo" />
         </a>
         <span class="mdc-top-app-bar__title">BestGuest</span>
@@ -22,7 +23,37 @@
     </div>
   </header>
   <br /><br /><br /><br />
-  <div class="mdc-card main-card">
+  <!-- INTRO CARD -->
+  <div class="mdc-card" id="intro-card">
+    <div class="mdc-card__media mdc-card__Titlemedia--square">
+      <h1 class="mdc-typography--headline2">Welcome to Cheesy's Pizza</h1>
+    </div>
+
+    <div class="mdc-card intro-sub-card" id="new-customer-sub-card">
+    <div class="mdc-card__media mdc-card__media--square">
+      <div class="mdc-card__media-content" >
+        <h4 class="mdc-typography--headline4">
+          <a class="card-link" href="#" onclick="navPage('new-customer')">New Customer</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="mdc-card intro-sub-card" id="regular-customer-sub-card">
+    <div class="mdc-card__media mdc-card__media--square">
+      <div class="mdc-card__media-content">
+        <h4 class="mdc-typography--headline4">
+          <a class="card-link" href="#" onclick="navPage('regular-customer')">Regular Customer</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+  <!-- Regular Customer Card -->
+  <div class="mdc-card" id="regular-customer-card">
     <div class="mdc-card__media mdc-card__Titlemedia--square">
       <div class="mdc-card__media-content">
         <ul class="mdc-list">
@@ -60,12 +91,7 @@
           </ul>
         </li>
       </div>
-    </div>    
-  </div>
-  <div class="mdc-card__actions">
-    <button class="foo-button mdc-button">
-      Make a Note
-    </button>    
+    </div>
   </div>
 	</body>
 </html>

@@ -6,13 +6,14 @@ $mdc-theme-primary: #0288d1;
 @import "@material/card/mdc-card";
 @import "@material/list/mdc-list";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
 
 .foo-button {
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
 }
 
-.main-card {
+#regular-customer-card {
     width: 100%;
     height:400px;
 }
@@ -25,4 +26,23 @@ $mdc-theme-primary: #0288d1;
 }
 .mdc-list-item__meta {
   color: $mdc-theme-primary;
+}
+.intro-sub-card {
+  height: 200px;
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+}
+#new-customer-sub-card {
+  background-color: #e53935;
+}
+#regular-customer-sub-card {
+  background-color: #43a047;
+}
+#intro-card {
+  flex-direction: row;
+}
+a.card-link {
+  color: white;
+  text-decoration: none;
 }
