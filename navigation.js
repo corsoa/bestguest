@@ -210,4 +210,18 @@ $(document).on('ready', (() => {
   });
   navPage();
  }));
+ $(document).keypress((e) => {
+  if (e.which === 49) {
+    navPage('regular-customer');
+  }
+  else if (e.which === 50) {
+    navPage('regular-customer', true);
+  }
+  else if (e.which === 51) {
+    navPage('top-customer-report');
+  }
+  else if (e.which === 52) {
+    navPage();
+  }
+ });
 }));
