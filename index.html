@@ -37,7 +37,7 @@
     <div class="mdc-card__media mdc-card__media--square">
       <div class="mdc-card__media-content" >
         <h4 class="mdc-typography--headline4">
-          <a class="card-link" href="#" onclick="navPage('new-customer')">New Customer</a>
+          <a class="card-link" href="#" onclick="navPage('regular-customer', true)">New Customer</a>
         </h4>
       </div>
     </div>
@@ -86,36 +86,30 @@
         <ul class="mdc-list">
          <li class="mdc-list-item">Customer ID
            <span class="mdc-list-item__meta">
-            12345
+            35936989
            </span>
          </li>
          <li class="mdc-list-item">Customer Name
-          <span class="mdc-list-item__meta">
-            John
+          <span class="mdc-list-item__meta" id="customer-data-name">
            </span>
          </li>
        </ul>
        <hr class="mdc-list-divider">
        <ul class="mdc-list">
          <li class="mdc-list-item">Frequent Flier?
-          <span class="mdc-list-item__meta">
-            <i class="material-icons">airplanemode_active</i>
+          <span class="mdc-list-item__meta" id="customer-data-is-frequent-flier">
            </span>
          </li>
        </ul>
        <ul class="mdc-list">
          <li class="mdc-list-item">Big Fish?
-          <span class="mdc-list-item__meta">
-            <i class="material-icons">card_travel</i>
+          <span class="mdc-list-item__meta" id="customer-data-is-big-fish">
            </span>
          </li>
        </ul>
        <ul class="mdc-list">
-        <li class="mdc-list-item">Notes
-          <ul>
-            <li>The usual - Diet coke</li>
-            <li>Likes reggae music</li>
-          </ul>
+        <li class="mdc-list-item" id="customer-data-notes">
+          Notes
         </li>
       </div>
     </div>
