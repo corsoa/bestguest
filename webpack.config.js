@@ -16,7 +16,7 @@ module.exports = [{
           },
         },
         { loader: 'extract-loader' },
-        { loader: 'css-loader' },
+        { loader: 'css-loader?url=false' },
         {
           loader: 'sass-loader',
           options: {

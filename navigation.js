@@ -49,7 +49,11 @@ $(document).on('ready', (() => {
     }
   ]
   */
+ 
  $.getJSON('raw_data.json', ((data) => {
+  $.getJSON('customer_profile.json', ((customerProfileData) => {
+
+  
   const topCustomerData = [];
   //do some preprocessing
   const customerHash = {};
@@ -175,6 +179,30 @@ $(document).on('ready', (() => {
     return `<ul><li>${allNotes[Math.floor(Math.random() * allNotes.length)]}</li>
     <li>${allNotes[Math.floor(Math.random() * allNotes.length)]}</li></ul>`;
   });
+  const buildPaymentProfileView = ((max) => {
+    const getRandomAnonCard = (() => {
+      return `XXXX${Math.floor(Math.random() * 9999) + 1}`;
+    });
+    if (!max) {
+      max = 1;
+    }
+    let builtProfileView = '';
+    // use the received API (sample) data.
+    customerProfileData.profile.paymentProfiles.forEach((paymentProfile) => {
+      //only get one payment method from sample data.
+      const creditCard = paymentProfile.payment.creditCard;
+      for (let i = 0; i < max; i++) {
+        if (i > 0) {
+          creditCard.cardNumber = getRandomAnonCard()
+        }
+        builtProfileView += `<li class="mdc-list-item">${creditCard.cardNumber}
+        <span class="mdc-list-item__meta card-type-${creditCard.cardType}">
+        </span>
+        </li>`;
+      }
+    });
+    return builtProfileView;
+  });
   window.navPage = ((pageId, newCustomer) => {
     if (!pageId) {
       $('#intro-card').show();
@@ -190,6 +218,7 @@ $(document).on('ready', (() => {
         $('#customer-data-is-big-fish').html('-');
         $('#customer-data-notes').html('');
         if (!newCustomer) {
+          // EXISTING CUSTOMER
           if (randomCustomer.isFrequentFlyer) {
             $('#customer-data-is-frequent-flier').html('<i class="material-icons">airplanemode_active</i>');
           }
@@ -199,13 +228,23 @@ $(document).on('ready', (() => {
           if (randomCustomer.visits > 3) {
             $('#customer-data-notes').html(buildRandomNotes());
           }
+          $('#payment-profile-list').html(buildPaymentProfileView(3));
+        }
+        else {
+          // NEW CUSTOMER
+          // on intro card, pulsate the div
+          (function pulse(){
+            $('#new-customer-sub-card').delay(200).fadeOut('slow').fadeIn();
+          })();
+          // fade in the notice that a new profile created.
+          $('#payment-profile-list').html(buildPaymentProfileView(1));
         }
       }
       else {
         $('#regular-customer-card').hide();
       }
       $('#' + pageId + '-card').show();
-      $('#intro-card').slideUp();
+      $('#intro-card').delay(500).slideUp();
     }
   });
   navPage();
@@ -224,4 +263,5 @@ $(document).on('ready', (() => {
     navPage();
   }
  });
+}));
 }));

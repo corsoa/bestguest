@@ -1,0 +1,39 @@
+{
+    "profile": {
+        "paymentProfiles": [
+            {
+                "customerPaymentProfileId": "35936989",
+                "payment": {
+                    "creditCard": {
+                        "cardNumber": "XXXX1111",
+                        "expirationDate": "XXXX",
+                        "cardType": "Visa",
+                        "issuerNumber": "411111"
+                    }
+                },
+                "customerType": "individual",
+                "billTo": {
+                    "firstName": "John",
+                    "lastName": "Smith"
+                }
+            }
+        ],
+        "customerProfileId": "39598611",
+        "merchantCustomerId": "CUST001",
+        "description": "Profile created by Subscription: 3078153",
+        "email": "joe@mail.com"
+    },
+    "subscriptionIds": [
+        "3078153",
+        "3078154"
+    ],
+    "messages": {
+        "resultCode": "Ok",
+        "message": [
+            {
+                "code": "I00001",
+                "text": "Successful."
+            }
+        ]
+    }
+}
