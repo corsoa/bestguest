@@ -219,8 +219,9 @@ $(document).on('ready', (() => {
         $('#customer-data-notes').html('');
         if (!newCustomer) {
           // EXISTING CUSTOMER
+          $('#customer-data-is-frequent-flier').html('<i class="material-icons">airplanemode_active</i>');
           if (randomCustomer.isFrequentFlyer) {
-            $('#customer-data-is-frequent-flier').html('<i class="material-icons">airplanemode_active</i>');
+            
           }
           if (randomCustomer.isBigFish) {
             $('#customer-data-is-big-fish').html('<i class="material-icons">card_travel</i>');
